@@ -22,12 +22,13 @@ function ProjectCard({
   return (
     <article
       className={cn(
-        "from-secondary/85 dark:from-dusty-denim/30 flex flex-wrap items-center justify-center gap-4 rounded-xl md:w-3/4 md:justify-normal",
+        "from-secondary/85 dark:from-dusty-denim/30",
+        "flex flex-col items-center justify-center gap-4 rounded-xl md:w-3/4 md:flex-row md:justify-normal",
         className,
       )}
     >
       <img
-        className="flex max-h-48 w-fit rounded-xl transition-all duration-300 hover:max-h-96 md:object-contain"
+        className="flex max-h-48 rounded-xl transition-all duration-300 hover:max-h-96 md:object-contain"
         src={thumbnail}
         alt={title}
       />
@@ -37,7 +38,7 @@ function ProjectCard({
         <p>{description}</p>
 
         {tags && tags.length > 0 && (
-          <ul className="flex flex-row flex-wrap gap-x-2">
+          <ul className="flex flex-row flex-wrap gap-x-2 gap-y-2">
             {tags.map((tag, index) => (
               <li
                 key={index}
